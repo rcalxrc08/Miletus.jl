@@ -3,6 +3,8 @@ import .TermStructure: YieldTermStructure, ConstantContinuousYieldCurve, discoun
 
 
 struct SingleStock <: Contract
+	name::String
+	SingleStock(in::String="")=new(in);
 end
 
 abstract type AbstractCoreModel <: AbstractModel 
